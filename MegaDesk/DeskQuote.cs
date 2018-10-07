@@ -1,61 +1,132 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace MegaDesk
+public class DeskQuote
 {
-    public partial class DeskQuote : Form
+    /*************************
+    * Create Class Variables * 
+    *************************/
+    public const int BASE_PRICE = 200;
+    public int SurfaceAreaPrice;
+    public int DrawerPrice;
+    public int SurfaceMaterialPrice;
+    public int RushOrderPrice;
+    public int TotalPrice;
+
+	public DeskQuote()
+	{        
+        // No constructor method
+	}
+
+    /*************************
+    * Create Class Methods   * 
+    *************************/
+    // Calculate the surface area price based off the Desk object's width and depth
+    public void GetSurfaceAreaPrice(int Width, int Depth)
     {
-        class Desk2
+        int SurfaceArea = Width * Depth;
+        
+        if (SurfaceArea > 1000)
         {
-            public string CustomerName;
-            public int Width;
-            public int Depth;
-            public int NoOfDrawers;
-            public SurfaceMaterial Material;
-            public RushOrderDays RushOrderDays;
-        };
-
-        enum SurfaceMaterial
-        {
-            Laminate,
-            Oak,
-            Rosewood,
-            Veneer,
-            Pine
-        };
-
-        enum RushOrderDays
-        {
-            Three = 3,
-            Five = 5,
-            Seven = 7,
-        };
-
-        public DeskQuote()
-        {
-            InitializeComponent();
-            Desk2 desk = new Desk2();
-            desk.CustomerName = "Desk Order for Alex Nielson";
-            desk.Width = 48;
-            desk.Depth = 36;
-            desk.NoOfDrawers = 3;
-            desk.Material = SurfaceMaterial.Laminate;
-            desk.RushOrderDays = RushOrderDays.Seven;
-
-            lblCustomerName.Text = desk.CustomerName;
-            lblWidth.Text = desk.Material.ToString();
-            lblWidth.Text = desk.Width.ToString();
-            lblDepth.Text = desk.Depth.ToString();
-            lblNoOfDrawers.Text = desk.NoOfDrawers.ToString();
-            lblSurfaceMaterial.Text = desk.Material.ToString();
-            lblRushOrderDays.Text = desk.RushOrderDays.ToString();
+            SurfaceAreaPrice = BASE_PRICE + (SurfaceArea * 1);
         }
+        else
+        {
+            SurfaceAreaPrice = BASE_PRICE;
+        }
+    }
+
+    // Calculate the desk drawer price based off the Desk object's number of drawers
+    public void GetDrawerPrice(int NoOfDrawers)
+    {
+        DrawerPrice = NoOfDrawers * 50;
+    }
+
+    // Calculate the surface material price based off the Desk object's surface material
+    public void GetSurfaceMaterialPrice(Desk.SurfaceMaterial Material)
+    {
+        switch (Material)
+        {
+            case Desk.SurfaceMaterial.Oak:
+                SurfaceMaterialPrice = 200;
+                break;
+            case Desk.SurfaceMaterial.Laminate:
+                SurfaceMaterialPrice = 100;
+                break;
+            case Desk.SurfaceMaterial.Pine:
+                SurfaceMaterialPrice = 50;
+                break;
+            case Desk.SurfaceMaterial.Rosewood:
+                SurfaceMaterialPrice = 300;
+                break;
+            case Desk.SurfaceMaterial.Veneer:
+                SurfaceMaterialPrice = 125;
+                break;
+            default:
+                SurfaceMaterialPrice = 0;
+                break;
+        }
+    }
+
+    // Calculate the rush order price based off the Desk object's width, depth, and number of rush order days
+    public void GetRushOrderPrice(Desk.RushOrderDays Days, int Width, int Depth)
+    {
+        int SurfaceArea = Width * Depth;
+        switch (Days)
+        {
+            case Desk.RushOrderDays.None:
+                RushOrderPrice = 0;
+                break;
+            case Desk.RushOrderDays.Three:
+                if (SurfaceArea < 1000)
+                {
+                    RushOrderPrice = 60;
+                }
+                else if (SurfaceArea > 1000 && SurfaceArea < 2000)
+                {
+                    RushOrderPrice = 70;
+                }
+                else
+                {
+                    RushOrderPrice = 80;
+                }
+                break;
+            case Desk.RushOrderDays.Five:
+                if (SurfaceArea < 1000)
+                {
+                    RushOrderPrice = 40;
+                }
+                else if (SurfaceArea > 1000 && SurfaceArea < 2000)
+                {
+                    RushOrderPrice = 50;
+                }
+                else
+                {
+                    RushOrderPrice = 60;
+                }
+                break;
+            case Desk.RushOrderDays.Seven:
+                if (SurfaceArea < 1000)
+                {
+                    RushOrderPrice = 30;
+                }
+                else if (SurfaceArea > 1000 && SurfaceArea < 2000)
+                {
+                    RushOrderPrice = 35;
+                }
+                else
+                {
+                    RushOrderPrice = 40;
+                }
+                break;
+            default:
+                RushOrderPrice = 0;
+                break;
+        }
+    }
+
+    // Calculate the total price
+    public int GetTotalPrice(int BasePrice, int SurfaceAreaPrice, int DrawerPrice, int SurfaceMaterialPrice, int RushOrderPrice)
+    {
+        return BasePrice + SurfaceAreaPrice + DrawerPrice + SurfaceMaterialPrice + RushOrderPrice;
     }
 }

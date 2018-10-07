@@ -46,23 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeskQuote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeskQuote.Designer.cs">
-      <DependentUpon>DeskQuote.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DeskQuote.cs" />
+    <Compile Include="Desk.cs" />
     <Compile Include="SearchQuotes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchQuotes.Designer.cs">
       <DependentUpon>SearchQuotes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Desk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Desk.Designer.cs">
-      <DependentUpon>Desk.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewAllQuotes.cs">
       <SubType>Form</SubType>
@@ -90,14 +80,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DeskQuote.resx">
-      <DependentUpon>DeskQuote.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SearchQuotes.resx">
       <DependentUpon>SearchQuotes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Desk.resx">
-      <DependentUpon>Desk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllQuotes.resx">
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
