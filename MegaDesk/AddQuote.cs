@@ -91,6 +91,16 @@ namespace MegaDesk
         }
 
         /********************
+        * 2. btnCancel      * 
+        ********************/
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
+        }
+
+        /********************
         * 3. btnSubmit      * 
         ********************/
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -108,14 +118,13 @@ namespace MegaDesk
                                                                             deskQuote.SurfaceAreaPrice,
                                                                             deskQuote.DrawerPrice,
                                                                             deskQuote.SurfaceMaterialPrice,
-                                                                            deskQuote.RushOrderPrice)
+                                                                            deskQuote.RushOrderPrice), "Quote"
                 );
             }
             else
             {
                 MessageBox.Show("There was an error configuring your quote", "Error");
             }
-
         }
 
         public bool ValidateRequirements()
@@ -210,28 +219,28 @@ namespace MegaDesk
                     {
                         switch (rb.Name)
                         {
-                            case "rb0":
+                            case "rbDrawers0":
                                 desk.NoOfDrawers = 0;
                                 break;
-                            case "rb1":
+                            case "rbDrawers1":
                                 desk.NoOfDrawers = 1;
                                 break;
-                            case "rb2":
+                            case "rbDrawers2":
                                 desk.NoOfDrawers = 2;
                                 break;
-                            case "rb3":
+                            case "rbDrawers3":
                                 desk.NoOfDrawers = 3;
                                 break;
-                            case "rb4":
+                            case "rbDrawers4":
                                 desk.NoOfDrawers = 4;
                                 break;
-                            case "rb5":
+                            case "rbDrawers5":
                                 desk.NoOfDrawers = 5;
                                 break;
-                            case "rb6":
+                            case "rbDrawers6":
                                 desk.NoOfDrawers = 6;
                                 break;
-                            case "rb7":
+                            case "rbDrawers7":
                                 desk.NoOfDrawers = 7;
                                 break;
                             default:
@@ -335,21 +344,6 @@ namespace MegaDesk
                 lbl.Text = "Please enter a valid whole number.";
             }
             return isANumber;
-        }
-
-        /********************
-        * 4. btnCancel      * 
-        ********************/
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            var mainMenu = (MainMenu)Tag;
-            mainMenu.Show();
-            Close();
-        }
-
-        private void ValidateTBDepth(object sender, KeyPressEventArgs e)
-        {
-
         }
     }
 }

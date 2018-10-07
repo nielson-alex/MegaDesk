@@ -51,15 +51,15 @@
             this.rb3 = new System.Windows.Forms.RadioButton();
             this.rb0 = new System.Windows.Forms.RadioButton();
             this.pnlNoOfDrawers = new System.Windows.Forms.Panel();
+            this.rbDrawers7 = new System.Windows.Forms.RadioButton();
+            this.rbDrawers6 = new System.Windows.Forms.RadioButton();
+            this.rbDrawers5 = new System.Windows.Forms.RadioButton();
+            this.rbDrawers4 = new System.Windows.Forms.RadioButton();
             this.rbDrawers3 = new System.Windows.Forms.RadioButton();
             this.rbDrawers2 = new System.Windows.Forms.RadioButton();
             this.rbDrawers1 = new System.Windows.Forms.RadioButton();
             this.rbDrawers0 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.rbDrawers4 = new System.Windows.Forms.RadioButton();
-            this.rbDrawers5 = new System.Windows.Forms.RadioButton();
-            this.rbDrawers6 = new System.Windows.Forms.RadioButton();
-            this.rbDrawers7 = new System.Windows.Forms.RadioButton();
             this.pnlMaterialOptions.SuspendLayout();
             this.pnlRushOrderOptions.SuspendLayout();
             this.pnlNoOfDrawers.SuspendLayout();
@@ -152,7 +152,7 @@
             this.lblSubmitError.AutoSize = true;
             this.lblSubmitError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubmitError.ForeColor = System.Drawing.Color.Red;
-            this.lblSubmitError.Location = new System.Drawing.Point(402, 276);
+            this.lblSubmitError.Location = new System.Drawing.Point(386, 276);
             this.lblSubmitError.Name = "lblSubmitError";
             this.lblSubmitError.Size = new System.Drawing.Size(0, 29);
             this.lblSubmitError.TabIndex = 9;
@@ -161,7 +161,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(316, 169);
+            this.label3.Location = new System.Drawing.Point(300, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 29);
             this.label3.TabIndex = 11;
@@ -184,7 +184,7 @@
             this.pnlMaterialOptions.Controls.Add(this.rbRosewood);
             this.pnlMaterialOptions.Controls.Add(this.rbOak);
             this.pnlMaterialOptions.Controls.Add(this.rbLaminate);
-            this.pnlMaterialOptions.Location = new System.Drawing.Point(332, 211);
+            this.pnlMaterialOptions.Location = new System.Drawing.Point(316, 211);
             this.pnlMaterialOptions.Name = "pnlMaterialOptions";
             this.pnlMaterialOptions.Size = new System.Drawing.Size(160, 199);
             this.pnlMaterialOptions.TabIndex = 21;
@@ -323,6 +323,54 @@
             this.pnlNoOfDrawers.Size = new System.Drawing.Size(168, 153);
             this.pnlNoOfDrawers.TabIndex = 24;
             // 
+            // rbDrawers7
+            // 
+            this.rbDrawers7.AutoSize = true;
+            this.rbDrawers7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDrawers7.Location = new System.Drawing.Point(53, 81);
+            this.rbDrawers7.Name = "rbDrawers7";
+            this.rbDrawers7.Size = new System.Drawing.Size(44, 33);
+            this.rbDrawers7.TabIndex = 28;
+            this.rbDrawers7.TabStop = true;
+            this.rbDrawers7.Text = "7";
+            this.rbDrawers7.UseVisualStyleBackColor = true;
+            // 
+            // rbDrawers6
+            // 
+            this.rbDrawers6.AutoSize = true;
+            this.rbDrawers6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDrawers6.Location = new System.Drawing.Point(3, 81);
+            this.rbDrawers6.Name = "rbDrawers6";
+            this.rbDrawers6.Size = new System.Drawing.Size(44, 33);
+            this.rbDrawers6.TabIndex = 27;
+            this.rbDrawers6.TabStop = true;
+            this.rbDrawers6.Text = "6";
+            this.rbDrawers6.UseVisualStyleBackColor = true;
+            // 
+            // rbDrawers5
+            // 
+            this.rbDrawers5.AutoSize = true;
+            this.rbDrawers5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDrawers5.Location = new System.Drawing.Point(103, 42);
+            this.rbDrawers5.Name = "rbDrawers5";
+            this.rbDrawers5.Size = new System.Drawing.Size(44, 33);
+            this.rbDrawers5.TabIndex = 26;
+            this.rbDrawers5.TabStop = true;
+            this.rbDrawers5.Text = "5";
+            this.rbDrawers5.UseVisualStyleBackColor = true;
+            // 
+            // rbDrawers4
+            // 
+            this.rbDrawers4.AutoSize = true;
+            this.rbDrawers4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDrawers4.Location = new System.Drawing.Point(53, 42);
+            this.rbDrawers4.Name = "rbDrawers4";
+            this.rbDrawers4.Size = new System.Drawing.Size(44, 33);
+            this.rbDrawers4.TabIndex = 25;
+            this.rbDrawers4.TabStop = true;
+            this.rbDrawers4.Text = "4";
+            this.rbDrawers4.UseVisualStyleBackColor = true;
+            // 
             // rbDrawers3
             // 
             this.rbDrawers3.AutoSize = true;
@@ -381,54 +429,6 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "No. of Drawers";
             // 
-            // rbDrawers4
-            // 
-            this.rbDrawers4.AutoSize = true;
-            this.rbDrawers4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDrawers4.Location = new System.Drawing.Point(53, 42);
-            this.rbDrawers4.Name = "rbDrawers4";
-            this.rbDrawers4.Size = new System.Drawing.Size(44, 33);
-            this.rbDrawers4.TabIndex = 25;
-            this.rbDrawers4.TabStop = true;
-            this.rbDrawers4.Text = "4";
-            this.rbDrawers4.UseVisualStyleBackColor = true;
-            // 
-            // rbDrawers5
-            // 
-            this.rbDrawers5.AutoSize = true;
-            this.rbDrawers5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDrawers5.Location = new System.Drawing.Point(103, 42);
-            this.rbDrawers5.Name = "rbDrawers5";
-            this.rbDrawers5.Size = new System.Drawing.Size(44, 33);
-            this.rbDrawers5.TabIndex = 26;
-            this.rbDrawers5.TabStop = true;
-            this.rbDrawers5.Text = "5";
-            this.rbDrawers5.UseVisualStyleBackColor = true;
-            // 
-            // rbDrawers6
-            // 
-            this.rbDrawers6.AutoSize = true;
-            this.rbDrawers6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDrawers6.Location = new System.Drawing.Point(3, 81);
-            this.rbDrawers6.Name = "rbDrawers6";
-            this.rbDrawers6.Size = new System.Drawing.Size(44, 33);
-            this.rbDrawers6.TabIndex = 27;
-            this.rbDrawers6.TabStop = true;
-            this.rbDrawers6.Text = "6";
-            this.rbDrawers6.UseVisualStyleBackColor = true;
-            // 
-            // rbDrawers7
-            // 
-            this.rbDrawers7.AutoSize = true;
-            this.rbDrawers7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDrawers7.Location = new System.Drawing.Point(53, 81);
-            this.rbDrawers7.Name = "rbDrawers7";
-            this.rbDrawers7.Size = new System.Drawing.Size(44, 33);
-            this.rbDrawers7.TabIndex = 28;
-            this.rbDrawers7.TabStop = true;
-            this.rbDrawers7.Text = "7";
-            this.rbDrawers7.UseVisualStyleBackColor = true;
-            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +450,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Name = "AddQuote";
-            this.Text = "Form1";
+            this.Text = "Get Quote";
             this.pnlMaterialOptions.ResumeLayout(false);
             this.pnlMaterialOptions.PerformLayout();
             this.pnlRushOrderOptions.ResumeLayout(false);

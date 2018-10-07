@@ -90,7 +90,7 @@
             this.Controls.Add(this.btnViewQuotes);
             this.Controls.Add(this.btnAddQuote);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "MegaDesk1.0";
             this.ResumeLayout(false);
             this.PerformLayout();
 
